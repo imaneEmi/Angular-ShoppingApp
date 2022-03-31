@@ -1,0 +1,18 @@
+<div class="card" style="width: 18rem;">
+    <figure>
+      <a [href]="productItem.image" target="_blank">
+      <img class="card-img-top" [src]="productItem.image" alt="product image ">
+      </a>
+      <figcaption>{{ productItem.name }}</figcaption>
+    </figure>
+
+  <div class="card-body">
+    <p class="card-text">{{ productItem.description }}</p>
+    <p class="stock-status" [class.inStock]="productItem.qteStock > 0">In Stock</p>
+    <p class="stock-status" [class.soldOut]="productItem.qteStock <= 0">Sold Out</p>
+    <p class="card-text"><small><small>Price:</small></small> {{ productItem.price }} <small>MAD</small></p>
+  </div>
+  <div class="card-footer">
+    <button [class.disableBtn]="productItem.qteStock <= 0" (click)="addToCart(productItem)">Add to cart</button>
+  </div>
+</div>

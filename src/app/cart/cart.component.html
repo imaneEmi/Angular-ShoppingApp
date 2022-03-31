@@ -1,0 +1,23 @@
+<header>
+  <h3>Shopping Cart</h3>
+</header>
+<main>
+  <ng-container *ngIf="selectedItems.length > 0">
+    <div *ngFor="let item of selectedItems" class="cart-product">
+      <span>ProductName</span>
+      <div class="qte-control-group">Qte
+        <input  [value]="qteCommande">
+        <div>
+          <button (click)="substruct()">-</button>
+          <button (click)="add()">+</button>
+        </div>
+      </div>
+      <button>Delete</button>
+    </div>
+  </ng-container>
+  <span *ngIf="selectedItems.length <= 0">Your Cart is empty.</span>
+</main>
+<footer>
+  <label for="total">Total</label>
+  <input type="number" name="total" id="total" disabled>
+</footer>

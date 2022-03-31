@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'shopping-app';
+  title = 'My online shop';
+  date = new Date()
+  visibility = true
+
+  showTime() {
+    this.visibility = false
+  }
+
+  hideTime() {
+    this.visibility = true
+  }
 }

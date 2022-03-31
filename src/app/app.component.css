@@ -1,0 +1,41 @@
+:host{
+    display: grid;
+    grid-template-areas: 'header header header header header header aside'
+                          'main main main main main main aside';
+    height: 100%;
+}
+header{
+  grid-area: header;
+  background-color: rgb(247, 234, 234);
+  display: flex;
+  justify-content:space-around;
+}
+h1{
+  margin: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 200;
+}
+.date-time{
+  align-self: center;
+  color: brown;
+  font-size: large;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+.date{
+  margin-right: 10px;
+}
+.time{
+  visibility: hidden;
+}
+aside{
+  grid-area:aside;
+  height: 100%;
+  margin-left: 10px;
+  padding: 0px 10px 0px 10px;
+  background-color: rgb(238, 231, 231);
+}
+section{
+  grid-area: main;
+  padding-top: 20px;
+}
